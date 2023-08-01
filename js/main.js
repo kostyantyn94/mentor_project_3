@@ -29,7 +29,7 @@ validation(nameInput, nameBtn)
 nameBtn.addEventListener('click', (e) => {
     e.preventDefault();
     form.classList.add('hidden')
-    comments.classList.remove('hidden')
+    input.classList.remove('hidden')
 })
 
 // COMMENT FUNTION
