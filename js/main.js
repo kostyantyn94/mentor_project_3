@@ -1,11 +1,13 @@
 // imports
 
-import { validation } from "./validation.js";
+import { validation } from "./modules/validation.js";
+import { send } from "./modules/sendComment.js";
 
 // Getting all sections
 
 const form = document.querySelector('.validation');
-const comments = document.querySelector('.comments');
+const input = document.querySelector('.input');
+const output = document.querySelector('.output');
 
 // NAME VALIDATION
 
@@ -29,3 +31,27 @@ nameBtn.addEventListener('click', (e) => {
     form.classList.add('hidden')
     comments.classList.remove('hidden')
 })
+
+// COMMENT FUNTION
+
+// getting the "send" btn
+
+const sendBtn = document.querySelector('.input__logged-user-btn');
+
+// getting the template for the comments blocks
+
+const commentBlock = document.querySelector('.output__user');
+
+// getting the output container 
+
+const outputContainer = document.querySelector('.output__container');
+
+// getting the textarea element from input block
+
+const inputComment = document.getElementById('input-textarea')
+
+// send button event
+
+sendBtn.onclick = () => {
+    send(commentBlock, inputComment, outputContainer)
+};

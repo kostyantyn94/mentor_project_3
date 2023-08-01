@@ -11,8 +11,10 @@ function createErrorBlock() {
 // Validation function
 
 export function validation (input, btn) {
+
     const errorBlock = createErrorBlock()
     input.after(errorBlock);
+    
     input.addEventListener('input', () => {
         if (input.value.length == 0 ) {
             errorBlock.innerHTML = "Name field can't be empty";
