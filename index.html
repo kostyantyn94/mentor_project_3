@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Comment section</title>
+</head>
+
+<body>
+
+  <section class="validation hidden">
+    <h1 class="validation__header">Enter your name</h1>
+    <form action="#" class="validation__form">
+      <input class="validation__name" type="text" name="name" placeholder="Jack">
+      <button class="validation__btn">Confirm</button>
+    </form>
+  </section>
+
+  <section class="comments">
+    <div class="comments__container">
+      <div class="comments__user">
+        <div class="comments__user-likes">
+          <div class="comments__user-likes-plus">
+            <img src="/images/icon-plus.svg" alt="plus">
+          </div>
+          <div class="comments__user-likes-count">12</div>
+          <div class="comments__user-likes-minus">
+            <img src="/images/icon-minus.svg" alt="minus">
+          </div>
+        </div>
+        <div class="comments__user-comment">
+          <div class="comments__user-comment-avatar">
+            <img src="/images/avatars/image-amyrobson.png" alt="avatar">
+          </div>
+          <div class="comments__user-comment-name">amyrobson</div>
+          <div class="comments__user-comment-time">1 month ago</div>
+          <div class="comments__user-comment-reply">
+            <img src="/images/icon-reply.svg" alt="reply">
+            <span>Reply</span>
+          </div>
+          <div class="comments__user-comment-text">
+            Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You’ve
+            nailed the design and the responsiveness at various breakpoints works really well.
+          </div>
+        </div>
+      </div>
+      <div class="comments__logged-user hidden">
+        <div class="comments__logged-user-avatar">
+          <img src="/images/avatars/image-juliusomo.png" alt="avatar">
+        </div>
+        <div class="comments__logged-user-text">
+          <textarea name="logged-user-text" placeholder="Add a comment..." cols="20" rows="10"></textarea>
+        </div>
+        <button class="comments__logged-user-btn">SEND</button>
+      </div>
+    </div>
+  </section>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+
+</html>
