@@ -20,10 +20,10 @@ export function validation (input, btn) {
         else if ((/.*?[\W\d]+.*/.test(input.value))) {
             errorBlock.innerHTML = "Name should only contain letters";
         }
-        else if (input.value.length > 30) {
+        else if (input.value.length > 16) {
             errorBlock.innerHTML = "Name should not contain more than 30 characters";
         }
-        else if (input.value.length < 2) {
+        else if (input.value.length < 3) {
             errorBlock.innerHTML = "Name should not contain less than 2 characters";
         }
         else {
