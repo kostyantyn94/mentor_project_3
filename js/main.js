@@ -1,7 +1,7 @@
 // imports
 
 import { validation } from "./modules/validation.js";
-import { send } from "./modules/sendComment.js";
+import { send } from "./modules/comments/add_comment.js";
 
 // Getting all sections
 
@@ -30,17 +30,15 @@ nameBtn.addEventListener('click', (e) => {
     e.preventDefault();
     form.classList.add('hidden')
     input.classList.remove('hidden')
+    localStorage.setItem("name", nameInput.value)
 })
 
-// COMMENT FUNTION
+
+// ADD COMMENT FUNCTION
 
 // getting the "send" btn
 
 const sendBtn = document.querySelector('.input__logged-user-btn');
-
-// getting the template for the comments blocks
-
-const commentBlock = document.querySelector('.output__user');
 
 // getting the output container 
 
@@ -48,10 +46,15 @@ const outputContainer = document.querySelector('.output__container');
 
 // getting the textarea element from input block
 
-const inputComment = document.getElementById('input-textarea')
+const inputComment = document.getElementById('input-textarea');
 
 // send button event
 
 sendBtn.onclick = () => {
-    send(commentBlock, inputComment, outputContainer)
+    send(inputComment, outputContainer)
 };
+
+// REPLY FUNCTION
+
+// getting the reply button
+
