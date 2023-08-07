@@ -2,6 +2,7 @@
 
 import { validation } from "./modules/validation.js";
 import { send } from "./modules/comments/add_comment.js";
+import { setId } from "./modules/comments/set_id.js";
 
 // Getting all sections
 
@@ -48,13 +49,30 @@ const outputContainer = document.querySelector('.output__container');
 
 const inputComment = document.getElementById('input-textarea');
 
-// send button event
+// send onlick event
 
-sendBtn.onclick = () => {
+sendBtn.onclick = function commenting () {
+
+    // send comment function
+
     send(inputComment, outputContainer)
+
+    // getting all comments and assign id to each one
+
+    const allComments = document.querySelectorAll('.output__user');
+    setId(allComments)
+
+    return allComments
 };
+
+ 
+allComments.forEach( (elem) => {
+    elem.addEventListener('click', (e) => {
+        console.log('yeah')
+    })
+})
 
 // REPLY FUNCTION
 
-// getting the reply button
+
 
