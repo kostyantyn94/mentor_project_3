@@ -1,14 +1,12 @@
 // imports
 
 import { validation } from "./modules/validation.js";
-import { send } from "./modules/comments/add_comment.js";
-import { setId } from "./modules/comments/set_id.js";
+import { send } from "./modules/comments/comment.js";
 
-// Getting all sections
+// Getting validation and input sections
 
 const form = document.querySelector('.validation');
 const input = document.querySelector('.input');
-const output = document.querySelector('.output');
 
 // NAME VALIDATION
 
@@ -57,22 +55,14 @@ sendBtn.onclick = function commenting () {
 
     send(inputComment, outputContainer)
 
-    // getting all comments and assign id to each one
-
-    const allComments = document.querySelectorAll('.output__user');
-    setId(allComments)
-
-    return allComments
 };
 
- 
-allComments.forEach( (elem) => {
-    elem.addEventListener('click', (e) => {
-        console.log('yeah')
-    })
-})
+
+
 
 // REPLY FUNCTION
 
 
 
+// 1. Створити функцію яка буде вертати HTML з полем вводу
+// 2. Створити хенждер на реплай, який буде замінювати блок з полем вводу на блок з комментом.

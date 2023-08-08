@@ -1,8 +1,7 @@
-.input
-    margin-top: 20px 
-    &__container
-        width: 730px
-        margin: 0 auto
+.reply-active
+    margin-left: auto
+    width: 642px
+    position: relative
     &__logged-user
         border-radius: 8px
         background: $white
@@ -10,7 +9,8 @@
         height: 144px
         width: 100%
         display: grid
-        grid-template: 96px / 40px 506px 104px
+        grid-template: 96px / 40px 418px 104px
+        grid-auto-rows: auto
         column-gap: 16px
         align-items: start
         &-avatar
@@ -22,7 +22,7 @@
         &-text
             textarea
                 padding: 12px 24px
-                width: 506px
+                width: 418px
                 height: 96px
                 border-radius: 8px
                 border: 1px solid #E9EBF0
